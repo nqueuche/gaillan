@@ -41,36 +41,36 @@ function browserSyncReload(done) {
   done();
 }
 
-// Clean vendor
+// Clean vendoor
 function clean() {
-  return del(["./vendor/"]);
+  return del(["./vendoor/"]);
 }
 
-// Bring third party dependencies from node_modules into vendor directory
+// Bring third party dependencies from node_modules into vendoor directory
 function modules() {
   // Bootstrap
   var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
+    .pipe(gulp.dest('./vendoor/bootstrap'));
   // Font Awesome CSS
   var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/css'));
+    .pipe(gulp.dest('./vendoor/fontawesome-free/css'));
   // Font Awesome Webfonts
   var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
+    .pipe(gulp.dest('./vendoor/fontawesome-free/webfonts'));
   // jQuery Easing
   var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
+    .pipe(gulp.dest('./vendoor/jquery-easing'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'));
+    .pipe(gulp.dest('./vendoor/jquery'));
   // Simple Line Icons
   var simpleLineIconsFonts = gulp.src('./node_modules/simple-line-icons/fonts/**')
-    .pipe(gulp.dest('./vendor/simple-line-icons/fonts'));
+    .pipe(gulp.dest('./vendoor/simple-line-icons/fonts'));
   var simpleLineIconsCSS = gulp.src('./node_modules/simple-line-icons/css/**')
-    .pipe(gulp.dest('./vendor/simple-line-icons/css'));
+    .pipe(gulp.dest('./vendoor/simple-line-icons/css'));
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, simpleLineIconsFonts, simpleLineIconsCSS);
 }
 
@@ -106,14 +106,14 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, css);
+const vendoor = gulp.series(clean, modules);
+const build = gulp.series(vendoor, css);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.clean = clean;
-exports.vendor = vendor;
+exports.vendoor = vendoor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

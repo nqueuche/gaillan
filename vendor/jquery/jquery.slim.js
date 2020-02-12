@@ -4006,7 +4006,7 @@ function fcamelCase( all, letter ) {
 
 // Convert dashed to camelCase; used by the css and data modules
 // Support: IE <=9 - 11, Edge 12 - 15
-// Microsoft forgot to hump their vendor prefix (#9572)
+// Microsoft forgot to hump their vendoor prefix (#9572)
 function camelCase( string ) {
 	return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
 }
@@ -6410,12 +6410,12 @@ function addGetHookIf( conditionFn, hookFn ) {
 
 var cssPrefixes = [ "Webkit", "Moz", "ms" ],
 	emptyStyle = document.createElement( "div" ).style,
-	vendorProps = {};
+	vendoorProps = {};
 
-// Return a vendor-prefixed property or undefined
-function vendorPropName( name ) {
+// Return a vendoor-prefixed property or undefined
+function vendoorPropName( name ) {
 
-	// Check for vendor prefixed names
+	// Check for vendoor prefixed names
 	var capName = name[ 0 ].toUpperCase() + name.slice( 1 ),
 		i = cssPrefixes.length;
 
@@ -6427,9 +6427,9 @@ function vendorPropName( name ) {
 	}
 }
 
-// Return a potentially-mapped jQuery.cssProps or vendor prefixed property
+// Return a potentially-mapped jQuery.cssProps or vendoor prefixed property
 function finalPropName( name ) {
-	var final = jQuery.cssProps[ name ] || vendorProps[ name ];
+	var final = jQuery.cssProps[ name ] || vendoorProps[ name ];
 
 	if ( final ) {
 		return final;
@@ -6437,7 +6437,7 @@ function finalPropName( name ) {
 	if ( name in emptyStyle ) {
 		return name;
 	}
-	return vendorProps[ name ] = vendorPropName( name ) || name;
+	return vendoorProps[ name ] = vendoorPropName( name ) || name;
 }
 
 

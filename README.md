@@ -40,7 +40,7 @@ After installation, run `npm install` and then run `npm start` which will open u
 - `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
 - `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
 - `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
+- `gulp vendoor` copies dependencies from node_modules to the vendoor directory
 
 You must have npm installed globally in order to use this build environment.
 
