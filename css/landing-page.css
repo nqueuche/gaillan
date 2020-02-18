@@ -4,17 +4,19 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
+ @import url('https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap');
+
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Arial',sans-serif;
 }
 
 h1,
 h2,
-h3,
+h3,s
 h4,
 h5,
 h6 {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', 'Lato', 'Arial',sans-serif;
   font-weight: 700;
 }
 
