@@ -128,4 +128,20 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+.navbar {
+  background-color: #AFCA64;
+}
+.nav-link {
+  color: white;
+}
+
+.btn-primary {
+  background-color: #AFCA64;
+  border-color: #afca64;
+}
+
+.btn-primary:hover {
+  background-color: #92c15d;
+  border-color: #92c15d;
+}
 
