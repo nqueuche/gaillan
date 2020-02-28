@@ -6,6 +6,10 @@
 
  @import url('https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lato', 'Arial',sans-serif;
 }
@@ -138,10 +142,30 @@ footer.footer {
 .btn-primary {
   background-color: #AFCA64;
   border-color: #afca64;
+  color: rgba(0, 0, 0, 0.9)
 }
 
 .btn-primary:hover {
   background-color: #92c15d;
   border-color: #92c15d;
+  color: rgba(0, 0, 0, 0.9)
+}
+
+.btn-primary:active {
+  background-color: #92c15d;
+  border-color: #92c15d;
+  color: rgba(0, 0, 0, 0.9)
+}
+
+a {
+  color: #AFCA64;
+}
+
+a:hover {
+  color: #92c15d;
+}
+
+a:active {
+  color: #92c15d;
 }
 
